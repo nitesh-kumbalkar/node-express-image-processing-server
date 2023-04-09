@@ -3,6 +3,7 @@ const multer = require('multer');
 const router = Router();
 const path = require("path");
 const photoPath = path.resolve(__dirname, "../../client/photo-viewer.html");
+const imageProcessor = require("./imageProcessor");
 
 function filename(request, file, callback) {
     callback(null, file.originalname);
